@@ -1,0 +1,174 @@
+.section__padding {
+  padding: 4rem 6rem;
+}
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  border-radius: 10px;
+}
+
+/* Imagen de fondo */
+.app__bg {
+  background: url('./assets/bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; /* Evita repetir el fondo */
+  background-attachment: fixed; /* Fija el fondo al scroll */
+}
+
+.app__wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Añadido para que se ajuste automáticamente en pantallas pequeñas */
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem; /* Reduce el padding general en pantallas pequeñas */
+}
+
+.app__wrapper_info, .app__wrapper_img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.app__wrapper_img {
+  margin-left: 2rem;
+}
+
+.app__wrapper_img img {
+  width: 100%;
+  max-width: 80%; /* Limita el tamaño máximo de la imagen */
+}
+
+.custom__button {
+  background-color: var(--color-crimson);
+  color: var(--color-black);
+  font-family: var(--font-base);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom__button:hover {
+  background-color: var(--color-black); /* Añadido efecto hover */
+  color: white;
+}
+
+.p__cormorant, .p__opensans, .headtext__cormorant {
+  font-family: var(--font-base);
+  color: #B77E9D;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+.p__cormorant {
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.p__opensans {
+  font-family: var(--font-alt);
+  font-weight: 400;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.headtext__cormorant {
+  font-size: 4rem;
+  line-height: 1.3;
+}
+
+.spoon__img {
+  width: 45px;
+}
+
+/* Responsividad para pantallas grandes */
+@media screen and (min-width: 2000px) {
+  .custom__button, .p__cormorant {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .p__opensans {
+    font-size: 1.875rem;
+    line-height: 3.125rem;
+  }
+
+  .headtext__cormorant {
+    font-size: 9.375rem;
+    line-height: 13.125rem;
+  }
+
+  .spoon__img {
+    width: 80px;
+  }
+}
+
+/* Adaptación a pantallas medianas */
+@media screen and (max-width: 1150px) {
+  .app__wrapper {
+    flex-direction: column;
+  }
+
+  .app__wrapper_img {
+    margin: 3rem 0 0;
+  }
+
+  .app__wrapper_img-reverse {
+    margin: 0 0 3rem;
+  }
+
+  .app__wrapper_img img {
+    width: 90%; /* Ajuste para pantallas medianas */
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 850px) {
+  .section__padding {
+    padding: 2rem;
+  }
+  
+  .p__cormorant {
+    font-size: 1.25rem;
+  }
+
+  .p__opensans {
+    font-size: 0.875rem;
+  }
+}
+
+/* Adaptación a pantallas muy pequeñas (movil) */
+@media screen and (max-width: 450px) {
+  .p__opensans {
+    font-size: 0.75rem;
+  }
+
+  .p__cormorant {
+    font-size: 1.125rem;
+  }
+
+  .headtext__cormorant {
+    font-size: 2.8125rem;
+    line-height: 4.375rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Asegura que no haya espacios blancos extra alrededor de la imagen */
+}

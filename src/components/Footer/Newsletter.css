@@ -1,0 +1,120 @@
+.app__newsletter {
+    padding: 2rem 4rem;
+    border: 1px solid #B77E9D;
+    background: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app__newsletter-heading {
+    text-align: center;
+    margin-bottom: 2rem; /* Añadido un margen inferior para separar título del input */
+}
+
+.app__newsletter-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    width: 100%; /* Asegura que el contenedor del input ocupe todo el ancho */
+}
+
+.app__newsletter-input input {
+    width: 100%;
+    max-width: 620px;
+    border: 1px solid #B77E9D;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-base);
+    color: var(--color-white);
+    padding: 0.75rem 1rem;
+    background: var(--color-black);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 1rem; /* Ajustado para un espaciado más natural */
+}
+
+/* Estilos de enfoque para accesibilidad */
+.app__newsletter-input input:focus {
+    border-color: #B77E9D; /* Añadir un color de enfoque más claro */
+    box-shadow: 0 0 5px var(--color-golden-light); /* Sombra sutil al enfocar */
+    outline: none; /* Eliminar el borde por defecto del navegador */
+}
+
+.app__newsletter-input button {
+    width: max-content;
+    background-color: #3C7547;
+    color: var(--color-white);
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-base);
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover y focus para el botón */
+.app__newsletter-input button:hover,
+.app__newsletter-input button:focus {
+    background-color: var(--color-golden-light);
+    outline: none;
+}
+
+@media screen and (min-width: 2000px) {
+    .app__newsletter-input input {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .app__newsletter-input {
+        flex-direction: column;
+        align-items: stretch; /* Alinear los inputs al 100% */
+        width: 100%;
+    }
+
+    .app__newsletter-input input {
+        margin-bottom: 1rem; /* Espacio entre el input y el botón */
+        width: 100%;
+    }
+
+    .app__newsletter-input button {
+        width: 100%; /* El botón también ocupa todo el ancho */
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__newsletter {
+        padding: 2rem 1rem;
+        border: none;
+    }
+
+    .app__newsletter-input input {
+        font-size: 0.9rem; /* Tamaño de texto más pequeño en pantallas pequeñas */
+    }
+
+    .app__newsletter-input button {
+        padding: 0.75rem 1.5rem; /* Ajustar el padding para pantallas pequeñas */
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .app__newsletter-heading h1 {
+        font-size: 1.75rem; /* Reducir tamaño del texto */
+        line-height: 2.5rem;
+    }
+
+    .app__newsletter-input input {
+        font-size: 0.85rem; /* Reducir aún más el tamaño del input */
+    }
+
+    .app__newsletter-input button {
+        font-size: 0.85rem; /* Reducir el tamaño del botón */
+        padding: 0.5rem 1rem;
+    }
+
+}
